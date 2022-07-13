@@ -7,3 +7,5 @@ terraform.tfvars
 # Ignore dependency lock file
 .terraform.lock.hcl
 
+# Ignore state file
+terraform.tfstate*
