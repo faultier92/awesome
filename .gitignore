@@ -1,0 +1,9 @@
+# Ignore files including credentials
+terraform.tfvars
+
+# Ignore .terraform/ directory
+.terraform/
+
+# Ignore dependency lock file
+.terraform.lock.hcl
+
