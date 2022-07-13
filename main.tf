@@ -12,3 +12,22 @@ resource "aws_vpc" "main" {
     Name = "test-terraform-vpc"
   }
 }
+
+resource "aws_subnet" "in_primary_cidr" {
+  vpc_id     = aws_vpc.main.id
+  cidr_block = "10.0.1.0/24"
+
+  tags = {
+    Name = "test-terraform-subnet-01"
+  }
+}
+
+resource "aws_subnet" "in_secondary_cidr" {
+  vpc_id     = aws_vpc.main.id
+  cidr_block = "10.0.2.0/24"
+
+  tags = {
+    Name = "test-terraform-subnet-02"
+  }
+}
+
